@@ -24,9 +24,9 @@ function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20 dark:border-dark-border/60"
     >
       <div className="site-container">
-        <div className="flex items-center justify-between h-[4.5rem]">
+        <div className="md:grid md:grid-cols-[1fr_auto_1fr] md:items-center flex items-center justify-between h-[4.5rem] gap-3">
           {/* Logo */}
-          <div className="flex-1 flex">
+          <div className="flex-1 md:flex-none flex min-w-0">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center">
                 <Globe className="text-white" size={20} />
@@ -38,7 +38,7 @@ function Navbar() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center justify-center gap-1 p-1 rounded-2xl border border-current/10">
+          <div className="hidden md:flex items-center justify-center gap-1 p-1 rounded-2xl border border-current/10 justify-self-center">
             {links.map(link => (
               <Link
                 key={link.to}
@@ -56,7 +56,7 @@ function Navbar() {
           </div>
 
           {/* Actions */}
-          <div className="flex-1 hidden md:flex items-center justify-end gap-2">
+          <div className="flex-1 md:flex-none hidden md:flex items-center justify-end gap-2 justify-self-end">
             <button
               onClick={toggle}
               className={`h-10 w-10 inline-flex items-center justify-center rounded-xl transition-all duration-300 cursor-pointer ${dark ? 'hover:bg-white/10' : 'hover:bg-black/5'}`}

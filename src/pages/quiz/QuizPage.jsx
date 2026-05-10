@@ -55,7 +55,7 @@ export default function QuizPage() {
               {isComplete ? 'Complete!' : `${step + 1} of ${total}`}
             </span>
           </div>
-          <ProgressBar value={isComplete ? total : step} max={total} />
+          <ProgressBar value={isComplete ? total : step + 1} max={total} className="mt-1" />
         </div>
       </div>
 

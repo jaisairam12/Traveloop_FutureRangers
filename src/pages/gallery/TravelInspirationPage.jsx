@@ -52,7 +52,7 @@ export default function TravelInspirationPage() {
           <div className="flex gap-3 justify-center mb-10 flex-wrap">
             {cats.map(c => (
               <button key={c} onClick={() => setCat(c)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer shadow-sm
+                className={`inline-flex items-center justify-center text-center leading-none min-h-10 min-w-[88px] px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer shadow-sm
                   ${cat === c 
                     ? 'bg-primary text-white scale-105 shadow-primary/25' 
                     : dark 
